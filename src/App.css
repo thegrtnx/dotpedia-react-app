@@ -1,38 +1,203 @@
-.App {
-  text-align: center;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+@font-face {
+  font-family: dotpfont;
+  src: url(./fonts/Montserrat-Bold.ttf);
+  font-weight: bold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: 0.5s ease-in;
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  :root {
+    scroll-behavior: smooth;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background-color: #111 !important;
+  overscroll-behavior-y: contain;
+}
+
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
   color: white;
+  font-family: "inter", sans-serif;
+  line-height: 2;
 }
 
-.App-link {
-  color: #61dafb;
+
+h1 {
+  font-family: dotpfont !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+.card {
+
+  background-color: #222;
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+}
+
+
+.bg-btn {
+
+  background: #222;
+}
+
+
+:focus {
+  outline: 0 !important;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+
+pre {
+
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+
+hr {
+
+  color: white;
+  text-align: center !important;
+  align-self: center !important;
+  justify-self: center !important;
+}
+
+
+
+.bg-dark {
+
+  background-color: #111 !important;
+}
+
+.theme-dark {
+
+  background-color: #222 !important;
+}
+
+.ico-inactive {
+
+  opacity: 0.4 !important;
+  cursor: pointer;
+}
+
+
+.fa-fade {
+
+  animation-duration: var(--fa-animation-duration,2s) !important;
+}
+
+
+
+footer, nav {
+
+background: #222;
+
+}
+
+
+.read .card {
+
+  height: 20vh;
+}
+
+.fa-bounce {
+
+  animation-duration: var(--fa-animation-duration,2s) !important;
+}
+
+.fa-fade {
+
+  animation-duration: var(--fa-animation-duration,2s) !important;
+}
+
+
+.signupbtnn {
+
+  width: 100% !important;
+  background-color: #222 !important;
+}
+
+
+input:focus {
+  outline: 0 !important;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+  border: none !important;
+}
+
+
+
+/***** End of Animations ****/
+
+/********** RESPONSIVENESS **********/
+
+/* For 480 Resolution - Laptop*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* STYLES GO HERE */
+
+    .signupbtnn {
+
+    width: 100% !important;
+    background-color: #222 !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .read .card {
+
+    height: 18vh;
   }
+}
+
+/* For 640 Resolution - mobile */
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
+
+  .read .card {
+
+    height: 18vh;
+  }
+
+
+}
+
+/* For 1024 Resolution - laptop 1 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+ 
+}
+
+/* For 1366 Resolution  -- laptop 2*/
+@media only screen and (min-width: 1030px) and (max-width: 1366px) {
+  /* STYLES GO HERE */
+}
+
+/** desktop screen */
+@media only screen and (min-width: 1370px) and (max-width: 1605px) {
+  /* STYLES GO HERE */
+}
+
+/*Ipad Orientation : Landscape */
+@media only screen and (orientation: landscape) and (min-device-pixel-ratio: 1) and (min-device-width: 768px) and (max-device-width: 1007px) {
+  /* STYLES GO HERE */
+}
+
+/*ipad Orientation : Portrait */
+@media only screen and (orientation: portrait) and (min-device-pixel-ratio: 1) and (min-device-width: 768px) and (max-device-width: 1007px) {
+  /* STYLES GO HERE */
 }
