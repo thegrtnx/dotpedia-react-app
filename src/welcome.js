@@ -12,10 +12,16 @@ const Signup = () => {
                         <p style={{color: "#a1a1a1"}} className="mb-2 col-lg-9">No need to remember a passwords or pin. We'll use your email address to perform the magic in seconds! 🚀</p>
                         <form method="post" enctype="application/x-www-form-urlencoded">
                             <div className="input-group mb-3">
-                                
+                                <input type="email" className="form-control form-control bg-white py-3 px-4 px-lg-5 mt-3" placeholder="Your email address over here" aria-label="Your email address over here" aria-describedby="basic-addon2"/>
+                                <button className="btn text-white mt-2 bg-btn w-100 py-3 signupbtnn" type="button">Submit</button>
                             </div>
                         </form>
                     </div>
+
+                    <div className="col-12 text-start mt-3 mx-2">
+                        <pre style={{color:"#a1a1a1"}} id="msg"></pre>
+                    </div>
+
                 </div>
             </div>
 
