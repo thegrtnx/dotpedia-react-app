@@ -1,10 +1,12 @@
-import welcomesvg from './img/appimg/padi.png';
 import { useState } from "react";
+import welcomesvg from './img/appimg/padi.png';
+import getUserDeviceId from './userauth/userdeviceid';
+
 
 const Signup = () => {
 
     const [useremail, setEmail] = useState('');
-    const [deviceId, setDeviceId] = useState('devafo12345678');
+    const [deviceId, setDeviceId] = useState(getUserDeviceId);
 
     const handleSubmit = (e) => {
 

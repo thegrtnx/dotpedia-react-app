@@ -1,4 +1,4 @@
-import emailloader from './img/appimg/newemailloader.gif';
+import emailloader from '../img/appimg/newemailloader.gif';
 const Emailsent = () => {
     return ( 
 
