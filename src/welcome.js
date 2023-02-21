@@ -3,21 +3,22 @@ import { useState } from "react";
 
 const Signup = () => {
 
-    const [email, setEmail] = useState('');
+    const [useremail, setEmail] = useState('');
     const [deviceId, setDeviceId] = useState('devafo12345678');
 
     const handleSubmit = (e) => {
 
         e.preventDefault();
         
-        const bodydata = { email, deviceId };
+        const userVerify = { 
 
-        fetch('https://backend.dotpedia.com.ng/public/api/user-login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json'},
+            body: JSON.stringify({ email: useremail, device_id: deviceId })
+        
+        };
 
-        method: 'POST',
-        body: bodydata
-
-        })
+        fetch('https://backend.dotpedia.com.ng/public/api/user-login', userVerify)
         .then(response => response.json())
         .then(data => console.log(data))
         .catch(error => console.error(error));
@@ -37,7 +38,7 @@ const Signup = () => {
                         <p style={{color: "#a1a1a1"}} className="mb-2 col-lg-9">No need to remember a passwords or pin. We'll use your email address to perform the magic in seconds! 🚀</p>
                         <form method="post" onSubmit={handleSubmit}>
                             <div className="input-group mb-3">
-                                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="form-control form-control bg-white py-3 px-4 px-lg-5 mt-3"
+                                <input type="email" value={useremail} onChange={(e) => setEmail(e.target.value)} className="form-control form-control bg-white py-3 px-4 px-lg-5 mt-3"
                                  placeholder="Your email address over here" required/>
                                  <input type="text" value={deviceId} onChange={(e) => setDeviceId(e.target.value)} className="form-control form-control bg-white py-3 px-4 px-lg-5 mt-3"
                                  placeholder="Your email address over here" hidden required/>
