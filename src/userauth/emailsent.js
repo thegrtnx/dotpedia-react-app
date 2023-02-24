@@ -1,4 +1,11 @@
 import emailloader from '../img/appimg/newemailloader.gif';
+import Signup from '../welcome';
+
+const handleClick = (e) => {
+
+    console.log('hello, ninjas', e);
+}
+
 const Emailsent = () => {
     return ( 
 
@@ -18,15 +25,10 @@ const Emailsent = () => {
                         
                         
                         <div className="input-group-append">
-                            <button className="btn btn-outline-dark bg-dark text-white py-3 px-4 px-lg-5 mt-3" id="resendmail" type="button">Resend me the  mail</button>
+                            <button className="btn btn-outline-dark bg-dark text-white py-3 px-4 px-lg-5 mt-3" onClick={handleClick}>Resend me the  mail</button>
                         </div>
                         </div>
-                        
 
-
-                    </div>
-                    <div className="col-12 text-start mt-3 mx-2">
-                    <pre style={{color:"#a1a1a1"}} id="msg"></pre>
                     </div>
                     
                 </div>

@@ -138,6 +138,11 @@ background: #222;
 }
 
 
+.signupbtnn:active {
+
+  border: none !important;
+}
+
 input:focus {
   outline: 0 !important;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
